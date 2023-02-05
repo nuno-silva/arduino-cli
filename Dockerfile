@@ -1,5 +1,7 @@
 ARG DATE=latest
 FROM alpine
+# https://docs.docker.com/engine/reference/builder/#understand-how-arg-and-from-interact
+ARG DATE
 
 # config for arduino-cli
 # https://arduino.github.io/arduino-cli/0.29/configuration/
