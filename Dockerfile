@@ -1,5 +1,5 @@
 ARG DATE=latest
-FROM alpine
+FROM ubuntu
 # https://docs.docker.com/engine/reference/builder/#understand-how-arg-and-from-interact
 ARG DATE
 
@@ -15,7 +15,8 @@ ARG ESP8266_BOARDS_URL=https://arduino.esp8266.com/stable/package_esp8266com_ind
 ENV ARDUINO_BOARD_MANAGER_ADDITIONAL_URLS="$ESP32_BOARDS_URL $ESP8266_BOARDS_URL"
 
 # install arduino-cli
-RUN apk add curl git make bash py3-pyserial \
+RUN apt update \
+	&& apt install -y curl git make bash python3-serial coreutils \
 	&& curl -sS "https://raw.githubusercontent.com/arduino/arduino-cli/master/install.sh" \
 	-o install.sh \
 	&& BINDIR=/bin sh install.sh \

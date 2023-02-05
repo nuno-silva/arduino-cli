@@ -2,7 +2,7 @@
 
 [![Docker Pulls](https://img.shields.io/docker/pulls/nuno351/arduino-cli.svg?maxAge=604800)][nuno351/arduino-cli]
 
-[Alpine](https://hub.docker.com/_/alpine)-based image containing:
+[Ubuntu](https://hub.docker.com/_/ubuntu)-based image containing:
 
 * [arduino-cli](https://arduino.github.io/arduino-cli/)
 * the [Arduino Core for AVR](https://github.com/arduino/ArduinoCore-avr)
